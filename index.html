@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Le ultime notizie tech pubblicate su Hacker News, raccolte da Tongue.">
+  <meta name="theme-color" content="#d81b55">
+  <title>Tongue Tech | Le ultime notizie da Hacker News</title>
+  <link rel="icon" href="/src/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <p class="masthead__brand">Tongue <span>tech</span></p>
+      <h1 class="masthead__title">Le ultime notizie tech, appena uscite</h1>
+      <p class="masthead__text">Arrivano da Hacker News in ordine di pubblicazione, dalla più recente.</p>
+      <button class="masthead__refresh" type="button" data-js="refresh">Aggiorna</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p class="visually-hidden" role="status" data-js="status"></p>
+
+    <ol class="news" data-js="news-list"></ol>
+
+    <div class="feedback" data-js="feedback" hidden>
+      <p class="feedback__text" data-js="feedback-text"></p>
+      <button class="feedback__retry" type="button" data-js="retry">Riprova</button>
+    </div>
+
+    <div class="more">
+      <button class="more__button" type="button" data-js="load-more" hidden>Load more</button>
+      <p class="more__counter" data-js="counter"></p>
+    </div>
+  </main>
+
+  <footer class="wrap footer">
+    <p>
+      I dati arrivano dalle
+      <a href="https://github.com/HackerNews/API" target="_blank" rel="noopener noreferrer">API pubbliche di Hacker News</a>.
+      Tongue è un'azienda inventata per questo progetto di studio di Umberto Brignone.
+    </p>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
